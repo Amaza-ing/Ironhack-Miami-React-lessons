@@ -1,20 +1,21 @@
-import MovieCard from "./MovieCard"
+import "./MovieList.css";
+import MovieCard from "./MovieCard";
 
 function MovieList() {
   const movies = [
     {
       title: "Lord the Rings",
-      duration: 200
+      duration: 200,
     },
     {
       title: "Star Wars",
-      duration: 120
+      duration: 120,
     },
     {
       title: "Dune",
-      duration: 150
+      duration: 150,
     },
-  ]
+  ];
 
   return (
     <section className="movies-section">
@@ -25,7 +26,7 @@ function MovieList() {
         <MovieCard movie={movies[2]}></MovieCard>
       </ul>
     </section>
-  )
+  );
 }
 
-export default MovieList
+export default MovieList;

@@ -1,3 +1,5 @@
+import "./MovieCard.css";
+
 function MovieCard(props) {
   const { movie } = props;
 

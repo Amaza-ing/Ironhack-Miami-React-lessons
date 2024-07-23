@@ -1,0 +1,7 @@
+.movie-card {
+  background-color: orange;
+  padding: 5px 15px;
+  width: 200px;
+  text-align: center;
+  border: 3px solid black;
+}

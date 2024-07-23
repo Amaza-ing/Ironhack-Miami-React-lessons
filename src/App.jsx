@@ -1,6 +1,6 @@
-import './App.css'
-import HeaderComponent from './components/HeaderComponent'
-import MovieList from './components/MovieList';
+import "./App.css";
+import HeaderComponent from "./components/HeaderComponent";
+import MovieList from "./components/MovieList";
 
 function App() {
   let title = "This is my React Project!";
@@ -9,10 +9,12 @@ function App() {
     <>
       <HeaderComponent></HeaderComponent>
 
-      <h2>{title}</h2>
-      <MovieList></MovieList>
+      <main className="main">
+        <h2>{title}</h2>
+        <MovieList></MovieList>
+      </main>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
