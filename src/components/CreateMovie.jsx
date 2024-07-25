@@ -42,7 +42,7 @@ function CreateMovie(props) {
   return (
     <form onSubmit={handleSubmit}>
       <fieldset>
-        <label htmlFor="movie-title">Movie Title: </label>
+        <label htmlFor="movie-title">Movie title: </label>
         <input
           type="text"
           id="movie-title"
