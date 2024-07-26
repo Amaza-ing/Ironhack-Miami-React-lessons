@@ -4,7 +4,7 @@ import MovieCard from "./MovieCard";
 import lotrImg from "../assets/lotr.jpg";
 import starWarsImg from "../assets/star-wars.jpg";
 import duneImg from "../assets/dune.jpg";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CreateMovie from "./CreateMovie";
 
 function MovieList() {
@@ -39,6 +39,20 @@ function MovieList() {
   }
 
   const [movies, setMovies] = useState(movieData);
+
+  // useEffect(() => {
+  //   console.log("Movie List component mounted");
+  // }, [])
+
+  // useEffect(() => {
+  //   console.log("Movies state variable updated");
+  // }, [movies])
+
+  // useEffect(() => {
+  //   return () => {
+  //     console.log("Movie List component unmounted");
+  //   }
+  // }, [])
 
   const movieCards = movies.map((movie) => {
     return (
