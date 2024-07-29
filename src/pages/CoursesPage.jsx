@@ -6,6 +6,7 @@ import CreateCourse from "../components/CreateCourse";
 function CoursesPage() {
   const [courses, setCourses] = useState([]);
 
+  // GET Request
   const getCourses = async () => {
     try {
       const response = await fetch("http://localhost:8080/api/courses");
@@ -17,6 +18,7 @@ function CoursesPage() {
     }
   };
 
+  // POST Request
   const createCourse = async (newCourse) => {
     try {
       console.log(JSON.stringify(newCourse));
