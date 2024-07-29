@@ -10,6 +10,7 @@ function HeaderComponent() {
           <li><Link className="link" to="/">Home</Link></li>
           <li><Link className="link" to="/blog">Blog</Link></li>
           <li><Link className="link" to="/movies">Movies</Link></li>
+          <li><Link className="link" to="/courses">Courses</Link></li>
         </ul>
       </nav>
     </header>
