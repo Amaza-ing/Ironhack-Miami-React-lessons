@@ -1,16 +1,10 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import PostCard from "../components/PostCard";
 import HeaderComponent from "../components/HeaderComponent";
+import { BlogContext } from "../context/blog.context";
 
 function Blog() {
-  const [posts, setPosts] = useState([]);
-
-  const getPosts = async () => {
-    const response = await fetch("https://jsonplaceholder.typicode.com/posts");
-    const data = await response.json();
-    console.log(data);
-    setPosts(data);
-  };
+  const { posts, getPosts } = useContext(BlogContext);
 
   useEffect(() => {
     getPosts();

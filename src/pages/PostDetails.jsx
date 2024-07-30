@@ -1,22 +1,23 @@
 import { useParams } from "react-router-dom";
 import HeaderComponent from "../components/HeaderComponent";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { BlogContext } from "../context/blog.context";
 
 function PostDetails() {
   const { id } = useParams();
 
+  const { getPost } = useContext(BlogContext);
+
   const [post, setPost] = useState();
 
-  const getPost = async (id) => {
-    const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
-    const data = await response.json();
-    console.log(data);
-    setPost(data);
-  };
+  const obtainPost = async (id) => {
+    const data = await getPost(id);
+    setPost(data);    
+  }
 
   useEffect(() => {
-    getPost(id);
-  }, [id])
+    obtainPost(id);
+  }, [id]);
 
   return (
     <>
